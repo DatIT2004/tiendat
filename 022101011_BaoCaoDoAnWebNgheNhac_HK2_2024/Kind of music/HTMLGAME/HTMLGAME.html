@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="HTMLGAME.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Satisfy&display=swap" rel="stylesheet">
+    <script>
+        //Thanh nghe nhac
+let isLooping = false;
+let currentSongIndex = 0;
+
+const songs = [
+    { src: '../game/nhacgame1.mp3', title: 'Nhạc Game 1' },
+    { src: '../game/nhacgame2.mp3', title: 'Nhạc Game 2' },
+    { src: '../game/nhacgame3.mp3', title: 'Nhạc Game 3' },
+    { src: '../game/nhacgame4.mp3', title: 'Nhạc Game 4' },
+    { src: '../game/nhacgame5.mp3', title: 'Nhạc Game 5' }
+    
+    
+];
+
+function playSong(songSrc, songTitle, index) {
+    currentSongIndex = index;
+    let audioPlayer = document.getElementById('audioPlayer');
+    let audioSource = document.getElementById('audioSource');
+    let songTitleElement = document.getElementById('songTitle');
+
+    audioSource.src = songSrc;
+    songTitleElement.textContent = songTitle;
+    audioPlayer.load();
+    audioPlayer.play();
+
+    let musicPlayer = document.getElementById('musicPlayer');
+    musicPlayer.classList.add('show'); // Hiển thị thanh nghe nhạc
+}
+
+function toggleLoop() {
+    let audioPlayer = document.getElementById('audioPlayer');
+    let loopButton = document.getElementById('loopButton');
+    
+    isLooping = !isLooping;
+    audioPlayer.loop = isLooping;
+    
+    if (isLooping) {
+        loopButton.classList.add('active');
+        loopButton.textContent = 'Lặp lại: Bật';
+    } else {
+        loopButton.classList.remove('active');
+        loopButton.textContent = 'Lặp lại: Tắt';
+    }
+}
+
+function prevSong() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length)  % songs.length;
+    playSong(songs[currentSongIndex].src, songs[currentSongIndex].title, currentSongIndex);
+}
+
+function nextSong() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    playSong(songs[currentSongIndex].src, songs[currentSongIndex].title, currentSongIndex);
+}
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="MenuTrai">
+            <a href="../../index.html" class="abc"><i class='bx bx-home-alt'style=></i>Home</a>
+            <a href="../kindofmusic.html" class="abc"><i class='bx bx-music' ></i>Kind of music</a>
+        </div>
+    </header>
+    <main>
+        <div class="NoiDung">
+            <div class="pictureGame">
+                <img src="../game/choigame.PNG" alt="" class="pictureGame1">
+            </div>
+
+
+            <div class="MS">
+                <div class="music1">
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('../game/nhacgame1.mp3', 'Nhạc Game 1', 0)">
+                            <div class="modal">
+                                <i class='bx bx-play-circle icon' ></i>
+                            </div>
+                            <img src="../game/g1.PNG" alt="" class="image_music">
+                        </a>
+                        <p class="txt">Nhạc Game 1</p>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat" onclick="playSong('../game/nhacgame2.mp3', 'Nhạc Game 2', 1)">
+                            <div class="modal">
+                                <i class='bx bx-play-circle icon' ></i>
+                            </div>
+                            <img src="../game/g2.PNG" alt="" class="image_music">
+                        </a>
+                        <p class="txt">Nhạc Game 2</p>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat" onclick="playSong('../game/nhacgame3.mp3', 'Nhạc Game 3', 2)">
+                            <div class="modal">
+                                <i class='bx bx-play-circle icon' ></i>
+                            </div>
+                            <img src="../game/g3.PNG" alt="" class="image_music">
+                        </a>
+                        <p class="txt">Nhạc Game 3</p>
+                    </div>
+
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('../game/nhacgame4.mp3', 'Nhạc Game 4', 3)">
+                            <div class="modal">
+                                <i class='bx bx-play-circle icon' ></i>
+                            </div>
+                            <img src="../game/g4.PNG" alt="" class="image_music">
+                        </a>
+                        <p class="txt">Nhạc Game 4</p>
+                    </div>
+
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('../game/nhacgame5.mp3', 'Nhạc Game 5', 4)">
+                            <div class="modal">
+                                <i class='bx bx-play-circle icon' ></i>
+                            </div>
+                            <img src="../game/g5.PNG" alt="" class="image_music">
+                        </a>
+                        <p class="txt">Nhạc Game 5</p>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </main>
+    <div class="music-player" id="musicPlayer">
+        <div class="music-info">
+            <span id="songTitle">Chọn một bài hát</span>
+        </div>
+        <div class="controls">
+            <button id="prevButton" onclick="prevSong()">&#9664; Bài trước</button>
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mp3">
+                Trình duyệt của bạn không hỗ trợ phát nhạc.
+            </audio>
+            <button id="nextButton" onclick="nextSong()">Bài tiếp &#9654;</button>
+        </div>
+        <button id="loopButton" onclick="toggleLoop()">Lặp lại</button>
+    </div>
+</body>
+</html>

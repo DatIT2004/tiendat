@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hoquanghieu.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Satisfy&display=swap" rel="stylesheet">
+    <script>
+        //Thanh nghe nhac
+let isLooping = false;
+let currentSongIndex = 0;
+
+const songs = [
+    { src: 'HQH-AnhSayQua.mp3', title: 'Anh say quá' },
+    { src: 'HQH-NguoiKhocCungAnh.mp3', title: 'Người khóc cùng anh' },
+    { src: 'HQH-NuocMatDongBang.mp3', title: 'Nước mắt đóng băng' },
+    { src: 'HQH-SaiGonMuaRoi.mp3', title: 'Sài gòn mưa rơi' },
+    { src: 'HQH-TimAnhThatLai.mp3', title: 'Tìm anh thắt lại' }  
+    
+];
+
+// Chức năng tìm kiếm
+function searchSongs() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '';
+    if(query.trim().length===0) return;
+    const filteredSongs = songs.filter(song => song.title.toLowerCase().includes(query));
+
+    filteredSongs.forEach(song => {
+        const songDiv = document.createElement('div');
+        songDiv.classList.add('song');
+        songDiv.textContent = song.title;
+        songDiv.onclick = () => playSong(song.src,song.title,0);
+        resultsDiv.appendChild(songDiv);
+    });
+}
+function playSong(songSrc, songTitle, index) {
+    currentSongIndex = index;
+    let audioPlayer = document.getElementById('audioPlayer');
+    let audioSource = document.getElementById('audioSource');
+    let songTitleElement = document.getElementById('songTitle');
+
+    audioSource.src = songSrc;
+    songTitleElement.textContent = songTitle;
+    audioPlayer.load();
+    audioPlayer.play();
+
+    let musicPlayer = document.getElementById('musicPlayer');
+    musicPlayer.classList.add('show'); // Hiển thị thanh nghe nhạc
+}
+
+function toggleLoop() {
+    let audioPlayer = document.getElementById('audioPlayer');
+    let loopButton = document.getElementById('loopButton');
+    
+    isLooping = !isLooping;
+    audioPlayer.loop = isLooping;
+    
+    if (isLooping) {
+        loopButton.classList.add('active');
+        loopButton.textContent = 'Lặp lại: Bật';
+    } else {
+        loopButton.classList.remove('active');
+        loopButton.textContent = 'Lặp lại: Tắt';
+    }
+}
+
+function prevSong() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length)  % songs.length;
+    playSong(songs[currentSongIndex].src, songs[currentSongIndex].title, currentSongIndex);
+}
+
+function nextSong() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    playSong(songs[currentSongIndex].src, songs[currentSongIndex].title, currentSongIndex);
+}
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="MenuTrai">
+            <a href="../../index.html" class="abc"><i class='bx bx-home-alt'style=></i>Home</a>
+            <a href="../casi.html" class="abc"><i class='bx bx-radio'></i></i>Singer</a>
+        </div>
+    </header>
+    <main>
+        <div class="NoiDung">
+            <div class="nd">
+                <div class="ndhinh">
+                    <img src="../CS HoQuangHieu/Ho-Quang-Hieu-1-4180-1554792567.jpg" alt="" class="hinh">
+                </div>
+                <div class="music">
+                    <div class="trendleft">
+                        <div class="st1">
+                            <b style="color:white;margin-left: 23px;margin-top: 15px;">1</b>
+                            <img src="../CS HoQuangHieu/Ho-Quang-Hieu-1-4180-1554792567.jpg" class="image_music_2">
+                            <a  class="tenbaihat2" onclick="playSong('HQH-AnhSayQua.mp3','Anh say quá', 0)">Anh say quá</a>
+                        </div>
+    
+                        <div class="st1">
+                            <b style="color:white;margin-left: 20px;margin-top: 15px;">2</b>
+                            <img src="../CS HoQuangHieu/Ho-Quang-Hieu-1-4180-1554792567.jpg" class="image_music_2">
+                            <a  class="tenbaihat2" onclick="playSong('HQH-NguoiKhocCungAnh.mp3','Người khóc cùng anh', 1)">Người khóc cùng anh</a>
+                        </div>
+    
+                        <div class="st1">
+                            <b style="color:white;margin-left: 20px;margin-top: 15px;">3</b>
+                            <img src="../CS HoQuangHieu/Ho-Quang-Hieu-1-4180-1554792567.jpg" class="image_music_2">
+                            <a  class="tenbaihat2" onclick="playSong('HQH-NuocMatDongBang.mp3','Nước mắt đóng báo', 2)">Nước mắt đóng băng</a>
+                        </div>
+    
+                        <div class="st1">
+                            <b style="color:white;margin-left: 20px;margin-top: 15px;">4</b>
+                            <img src="../CS HoQuangHieu/Ho-Quang-Hieu-1-4180-1554792567.jpg" class="image_music_2">
+                            <a class="tenbaihat2" onclick="playSong('HQH-SaiGonMuaRoi.mp3','Sài gòn mơ rơi', 3)"> Sài gòn mưa rơi</a>
+                        </div>
+    
+                        <div class="st1">
+                            <b style="color:white;margin-left: 20px;margin-top: 15px;">5</b>
+                            <img src="../CS HoQuangHieu/Ho-Quang-Hieu-1-4180-1554792567.jpg" class="image_music_2">
+                            <a  class="tenbaihat2" onclick="playSong('HQH-TimAnhThatLai.mp3','Tim anh thắt lại', 4)">Tìm anh thắt lại</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="music-player" id="musicPlayer">
+        <div class="music-info">
+            <span id="songTitle">Chọn một bài hát</span>
+        </div>
+        <div class="controls">
+            <button id="prevButton" onclick="prevSong()">&#9664; Bài trước</button>
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mp3">
+                Trình duyệt của bạn không hỗ trợ phát nhạc.
+            </audio>
+            <button id="nextButton" onclick="nextSong()">Bài tiếp &#9654;</button>
+        </div>
+        <button id="loopButton" onclick="toggleLoop()">Lặp lại</button>
+    </div>
+</body>
+</html>

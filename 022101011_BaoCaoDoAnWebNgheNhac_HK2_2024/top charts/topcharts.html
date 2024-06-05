@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="topcharts.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Satisfy&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="" style="width: 170px;height: 100px;margin-left: 20px;margin-top: 20px;">
+        </div>
+        
+        <div class="sere">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for songs...">
+                <button id="searchButton" class="search-button" onclick="searchSongs()">Search</button>
+            </div>
+            <div id="results">
+                
+            </div>
+        </div>
+        
+    </header>
+    <main>
+        <div class="MenuTrai">
+            <a href="../index.html" class="abc"><i class='bx bx-home-alt'style=></i>Home</a>
+            <a href="../top charts/topcharts.html" class="topchar"><i class='bx bx-bar-chart-alt-2'></i>Top Charts</a>
+            <a href="../CaSi/casi.html" class="abc"><i class='bx bx-group'></i>Singer</a>
+            <a href="../Kind of music/kindofmusic.html" class="abc"><i class='bx bx-music' ></i>Kind of music</a>
+            <a href="../about-us/about-us.html" class="abc"><i class='bx bx-library'></i>About Us</a>
+            <hr style="color: aliceblue;width: 100%;margin-left: 20px;margin-top: 10px;">
+           
+        </div>
+        <div class="NoiDung">
+            <div class="TD">
+                <h1 style="color: aliceblue;margin-top: 30px;margin-left: 90px;">TOP CHARTS</h1>
+                <i class='bx bxs-playlist'style="color: aliceblue;padding-top:32px;margin-left:10px;font-size: 35px"></i>
+            </div>
+            <div class="TOP1 hover">
+                <div class="one"><img src="../top charts/stt/1.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai18/b18.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <a class="tenbaihat1" onclick="playSong('../Nhac/bai18/lamviecvanchieu.mp3', 'Làm việc cần chiêu', 0)">Làm việc cần chiêu</a>
+                    <div class="tacgia">Ca sĩ A</div>
+                </div>
+                <div class="five"><p class="single1">Làm việc cần chiêu(Single)</p></div>
+                <div class="six"><p class="time1">3:03</p></div>
+            </div>
+
+            <div class="TOP2 hover">
+                <div class="one"><img src="../top charts/stt/2.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai17/b17.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a class="tenbaihat1" onclick="playSong('../Nhac/bai17/BinhYenLaTroVe-TuanHiiThaoPham-6927488.mp3', 'Bình yên là trở về' , 1)">Bình yên là trở về</a></div>
+                    <div class="tacgia">Tuấn Hii,Thảo Phạm</div>
+                </div>
+                <div class="five"><p class="single2">Bình yên là trở về(Single)</p></div>
+                <div class="six"><p class="time2">2:57</p></div>
+            </div>
+
+            <div class="TOP3 hover">
+                <div class="one"><img src="../top charts/stt/3.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai16/b16.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai16/GuiLaiThanhXuan-LeoSuper9JBin-7205525.mp3','Gửi lại thanh xuân' , 2)">Gửi lại thanh xuân</a></div>
+                    <div class="tacgia">JBin</div>
+                </div>
+                <div class="five"><p class="single3">Gửi lại thanh xuân(Single)</p></div>
+                <div class="six"><p class="time3">3:48</p></div>
+            </div>
+
+            <div class="TOP4 hover">
+                <div class="one"><img src="../top charts/stt/4.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai15/b15.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a class="tenbaihat1" onclick="playSong('../Nhac/bai15/Thang5KhongTroLai-TheWallNutszz-4453704.mp3', 'Tháng năm khônng trở lại' , 3)">Tháng năm không trở lại</a></div>
+                    <div class="tacgia">Trần Thanh Quốc Thành</div>
+                </div>
+                <div class="five"><p class="single4">Tháng năm không trở lại(Single)</p></div>
+                <div class="six"><p class="time4">3:15</p></div>
+            </div>
+
+            <div class="TOP5 hover">
+                <div class="one"><img src="../top charts/stt/5.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai14/b14.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai14/PhaoHoa-PhiPhuongAnhTheFaceRIN9MiinaDreamerVietNam-7565066.mp3', 'Pháo hoa', 4)">Pháo hoa</a></div>
+                    <div class="tacgia">Phí Phương Anh và RIN9</div>
+                </div>
+                <div class="five"><p class="single5">Pháo hoa(Single)</p></div>
+                <div class="six"><p class="time5">2:56</p></div>
+            </div>
+
+            <div class="TOP6 hover">
+                <div class="one"><img src="../top charts/stt/6.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai13/b13.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai13/5ThangBenEm-KuunDucNam-11800169.mp3','Năm tháng bên em', 5)">Năm tháng bên em</a></div>
+                    <div class="tacgia">Kuun Đức Nam</div>
+                </div>
+                <div class="five"><p class="single6">Năm tháng bên em(Single)</p></div>
+                <div class="six"><p class="time6">3:27</p></div>
+            </div>
+
+            <div class="TOP7 hover">
+                <div class="one"><img src="../top charts/stt/7.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai12/b12.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai12/khongyeu.mp3', 'Không yêu', 6)">Không yêu</a></div>
+                    <div class="tacgia">Mỹ Tâm</div>
+                </div>
+                <div class="five"><p class="single7">Không yêu(Single)</p></div>
+                <div class="six"><p class="time7">2:55</p></div>
+            </div>
+
+            <div class="TOP8 hover">
+                <div class="one"><img src="../top charts/stt/8.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai11/b11.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai11/ChucMungNamMoi-VuPhungTienRumDaFameLyAnhKhoaPhuongDungSocola-6204153.mp3', 'Chúc mừng năm mới', 7)">Chúc mừng năm mới</a></div>
+                    <div class="tacgia">Hồ Quang Hiếu</div>
+                </div>
+                <div class="five"><p class="single8">Chúc mừng năm mới(Single)</p></div>
+                <div class="six"><p class="time8">3:12</p></div>
+            </div>
+
+            <div class="TOP9 hover">
+                <div class="one"><img src="../top charts/stt/9.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai10/b10.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai10/NamNayMinhLamLai-NhatThienWinKKayceeVietNamJayKemLil7RD-6940241.mp3',  'Năm nay mình làm lại', 8)">Năm nay mình làm lại</a></div>
+                    <div class="tacgia">Nhật Thiên, Win K, Kaycee, Jaykem</div>
+                </div>
+                <div class="five"><p class="single9">Năm nay mình làm lại(Single)</p></div>
+                <div class="six"><p class="time9">3:46</p></div>
+            </div>
+
+            <div class="TOP10 hover">
+                <div class="one"><img src="../top charts/stt/10.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai9/b9.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai9/TroVeTuoiTho-KBin-7310392.mp3', 'Trở về tuổi thơ', 9)">Trở về tuổi thơ</a></div>
+                    <div class="tacgia">KBin</div>
+                </div>
+                <div class="five"><p class="single10">Trở về tuổi thơ(Single)</p></div>
+                <div class="six"><p class="time10">2:59</p></div>
+            </div>
+
+            <div class="TOP11 hover">
+                <div class="one"><img src="../top charts/stt/11.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai8/b8.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a  class="tenbaihat1" onclick="playSong('../Nhac/bai8/TienLenVietNamOi-SonTungMTP-4003040.mp3', 'Tiên lên việt nam ơi', 10)">Tiến lên Việt Nam</a></div>
+                    <div class="tacgia">M-TP</div>
+                </div>
+                <div class="five"><p class="single11">Tiến lên Việt Nam(Single)</p></div>
+                <div class="six"><p class="time11">3:29</p></div>
+            </div>
+
+            <div class="TOP12 hover">
+                <div class="one"><img src="../top charts/stt/12.png" alt="" class="top1"></div>
+                <div class="two"><i class='bx bx-minus'></i></div>
+                <div class="three"><div class="modal"><i class='bx bxs-right-arrow icon'></i></div><img src="../Nhac/bai7/b7.jpg" alt="" class="threePicture"></div>
+                <div class="four">
+                    <div class="tenbaihat"><a class="tenbaihat1" onclick="playSong('../Nhac/bai7/NeuMuaHaNamAyTroLai-KaronHoangAnh-7055541.mp3', 'Nếu mùa hạ năm ấy trở lại', 11)">Nếu mùa hạ năm ấy trở lại</a></div>
+                    <div class="tacgia">Karon Hoàng Anh</div>
+                </div>
+                <div class="five"><p class="single12">Nếu mùa hạ năm ấy trở lại(Single)</p></div>
+                <div class="six"><p class="time12">3:15</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="music-player" id="musicPlayer">
+        <div class="music-info">
+            <span id="songTitle">Chọn một bài hát</span>
+        </div>
+        <div class="controls">
+            <button id="prevButton" onclick="prevSong()">&#9664; Bài trước</button>
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mp3">
+                Trình duyệt của bạn không hỗ trợ phát nhạc.
+            </audio>
+            <button id="nextButton" onclick="nextSong()">Bài tiếp &#9654;</button>
+        </div>
+        <button id="loopButton" onclick="toggleLoop()">Lặp lại</button>
+    </div>
+    <script src="topcharts.js"></script>
+
+</body>
+</html>

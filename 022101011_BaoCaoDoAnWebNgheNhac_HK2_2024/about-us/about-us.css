@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,81,121,1) 50%, rgba(0,212,255,1) 100%);
+    color: #fff;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+    overflow-x: hidden;
+
+}
+header{
+    display: flex;
+    gap: 40px;
+}
+
+main{
+    display: flex;
+}
+.MenuTrai{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.aboutus{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-style: bold;
+    text-decoration: none;
+    color: #1389ca;
+}
+.abc{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-style: bold;
+    text-decoration: none;
+    color: aliceblue;
+}
+.abc:hover{
+    color: #1389ca;
+    scale: 1.1;
+}
+.NoiDung{
+
+    border-radius: 7px;
+    margin-left: 66px;
+    width: 80%;
+    height: 2400px;
+    background-color:#181818;
+}
+
+
+/* ND*/
+
+.container {
+    width: 96.7%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+.showcase {
+    background: url(/about-us/baner.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+.showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.showcase h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+.showcase p {
+    font-size: 1.5em;
+    margin-bottom: 0;
+    z-index: 1;
+}
+.main {
+    padding: 60px 20px;
+    
+}
+.main h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e91e63;
+    display: inline-block;
+}
+.main p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+.team{
+
+    width:700px;
+    margin-left: 235px;
+}
+
+.team, .vision, .feedback {
+    display: flex;
+    justify-content: space-between;
+   gap: 50px;
+}
+.team .member, .vision .item, .feedback .card {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.team .member:hover, .vision .item:hover, .feedback .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+.member img, .vision img, .feedback img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.feedback form {    
+    display: flex;
+    flex-direction: column;
+}
+.feedback{
+    display: flex;
+    gap:10px;
+}
+.feedback form input, .feedback form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+.feedback form button {
+    padding: 10px;
+    background: #e91e63;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.feedback form button:hover {
+    background: rgb(11,167,236);
+    background: linear-gradient(100deg, rgba(11,167,236,1) 0%, rgba(177,224,246,1) 100%);
+}
+.feedback .user-feedback {
+    margin-top: 20px;
+}
+.feedback .user-feedback p {
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+ .bx:hover{
+    color: #1389ca;
+ }

@@ -1,0 +1,379 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,81,121,1) 50%, rgba(0,212,255,1) 100%);
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+header{
+    display: flex;
+    gap: 40px;
+}
+
+
+.sere{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00cede;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.search-button:hover {
+    background-color: #e64a19;
+}
+#results {
+    background-color:#1389ca;
+    position: absolute;
+    margin-top: 40px;
+    width: 400px;
+    z-index: 9;
+    border-radius: 5px;
+}
+.song {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.song:hover {
+    border-radius: 5px;
+    color: chocolate;
+    background-color: #bbb;
+}
+
+
+
+
+main{
+    display: flex;
+}
+.MenuTrai{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.topchar{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-style: bold;
+    text-decoration: none;
+    color: #1389ca;
+}
+.abc{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-style: bold;
+    text-decoration: none;
+    color: aliceblue;
+}
+.abc:hover{
+    color: #1389ca;
+}
+.NoiDung{
+    border-radius: 7px;
+    margin-left: 66px;
+    width: 80%;
+    height: 1000px;
+    background: rgb(31,140,196);
+    background: linear-gradient(90deg, rgba(31,140,196,0.3786764705882353) 0%, rgba(134,184,30,0.29744397759103647) 100%);
+}
+.TD{
+    display: flex;
+}
+.hover{
+    display: flex;
+    padding-top: 10px;
+}
+.one{
+    margin-left: 80px;
+    
+}
+.top1{
+    width: 45px;
+    height: 45px;
+}
+.two{
+    color: gray;
+    font-size: 25px;
+    margin-top: 7px;
+}
+.three{
+    position: relative;
+}
+.threePicture{
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    border-radius: 5px;
+    
+}
+.four{
+    margin-left: 10px;
+}
+.tenbaihat1{
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.tacgia{
+    color: gray;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.single1{
+    font-size: 15px;
+    margin-top: 12px;
+    margin: 10px 0;
+    color: antiquewhite;
+    margin-left: 205px;
+}
+.time1{
+    margin: 10px 0;
+    font-size: 17px; 
+    margin-left: 338px;   
+    color: aliceblue;
+}
+.single2{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 208px;
+    margin-top: 12px;
+}
+.time2{
+    font-size: 17px; 
+    margin-left: 346px;   
+    color: aliceblue;
+
+}
+.single3{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 207px;
+    margin-top: 12px;
+}
+.time3{
+    font-size: 17px; 
+    margin-left: 340px;   
+    color: aliceblue;
+
+}
+.single4{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 158px;
+    margin-top: 12px;
+}
+.time4{
+    font-size: 17px; 
+    margin-left: 310px;   
+    color: aliceblue;
+
+}
+.single5{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 200px;
+    margin-top: 12px;
+}
+.time5{
+    font-size: 17px; 
+    margin-left: 398px;   
+    color: aliceblue;
+
+}
+.single6{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 205px;
+    margin-top: 12px;
+}
+.time6{
+    font-size: 17px; 
+    margin-left: 344px;   
+    color: aliceblue;
+}
+.single7{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 272px;
+    margin-top: 12px;
+}
+.time7{
+    font-size: 17px; 
+    margin-left: 390px;   
+    color: aliceblue;
+}
+.single8{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 188px;
+    margin-top: 12px;
+}
+.time8{
+    font-size: 17px; 
+    margin-left: 330px;   
+    color: aliceblue;
+}
+.single9{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 155px;
+    margin-top: 12px;
+}
+.time9{
+    font-size: 17px; 
+    margin-left: 320px;   
+    color: aliceblue;
+}
+.single10{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 235px;
+    margin-top: 12px;
+}
+.time10{
+    font-size: 17px; 
+    margin-left: 357px;   
+    color: aliceblue;
+}
+.single11{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 215px;
+    margin-top: 12px;
+}
+.time11{
+    font-size: 17px; 
+    margin-left: 348px;   
+    color: aliceblue;
+}
+.single12{
+    font-size: 15px;
+    color: antiquewhite;
+    margin-left: 143px;
+    margin-top: 12px;
+}
+.time12{
+    font-size: 17px; 
+    margin-left: 295px;   
+    color: aliceblue;
+}
+.hover:hover{
+    background-color: #1389ca;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tenbaihat1:hover{
+    color: red;
+}
+
+.hover:hover .modal{
+    display: block;
+}
+.hover:hover{
+    scale: 1.07;
+    width: 1140px;
+    margin-left: 38px;
+}
+.modal{
+    background-color: rgba(25, 136, 192, 0.5);
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    display: none;
+    text-align: center;
+    border-radius: 4px;
+    left: 10px;
+    
+}
+.icon{
+    margin-top: 10px;
+    font-size: 23px;
+    color: aliceblue;
+}
+
+
+/* Thanh music */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+    color: white;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    display: none; /* Ẩn theo mặc định */
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    z-index: 1000;
+}
+
+.music-player.show {
+    display: flex; /* Hiển thị khi có lớp .show */
+}
+
+.music-info {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+audio {
+    width: 70%;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button.active {
+    background-color: #007BFF;
+}

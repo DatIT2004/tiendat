@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="" style="width: 170px;height: 100px;margin-left: 20px;margin-top: 20px;">
+        </div>     
+
+        <div class="sere">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for songs...">
+                <button id="searchButton" class="search-button" onclick="searchSongs()">Search</button>
+            </div>
+            <div id="results">
+
+            </div>
+        </div>
+
+        <div class="dnordk">
+            <a href="FromLogin&Register/Register.html"class="dk"><b>Register</b></a>
+            <a href="FromLogin&Register/Login.html" class="dn"><b>Login</b></a>
+        </div>
+    </header>
+    <main>
+        <div class="MenuTrai">
+            <a href="index.html" class="home"><i class='bx bx-home-alt'style=></i>Home</a>
+            <a href="top charts/topcharts.html" class="abc"><i class='bx bx-bar-chart-alt-2'></i>Top Charts</a>
+            <a href="./CaSi/casi.html" class="abc"><i class='bx bx-group'></i>Singer</a>
+            <a href="./Kind of music/kindofmusic.html" class="abc"><i class='bx bx-music' ></i>Kind of music</a>
+            <a href="./about-us/about-us.html" class="abc"><i class='bx bx-library'></i>About Us</a>
+            <hr style="color: aliceblue;width: 100%;margin-left: 20px;margin-top: 10px;">
+        </div>
+        <div class="NoiDung">
+            
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="baner/bn1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="baner/bn2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="baner/bn3.jpg" style="width:100%">
+                </div>
+                
+                <!-- Nút điều hướng -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+                <!-- Chấm điểm -->
+                <div style="text-align:center;" class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div> 
+
+            <h1 style="color: aliceblue;margin-left: 50px;">Music</h1>
+            <div class="MS">
+                <div class="music1">
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('./Nhac/bai1/bb1.mp3', 'Tháng năm rực rỡ', 0)">
+                            <div class="modal">
+                                <i class='bx bx-play-circle icon' ></i>
+                            </div>
+                            <img src="./Nhac/bai1/b1.jpg" alt="" class="image_music">Tháng năm rực rỡ
+                        </a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('./Nhac/bai2/consetrove.mp3', 'Con sẽ trở về', 1)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai2/b2.jpg" alt="" class="image_music">Con sẽ trở về</a>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat"  onclick="playSong('./Nhac/bai3/tantro.mp3', 'Tàn tro', 2)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai3/b3.jpg" alt="" class="image_music">Tàn tro</a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat"  onclick="playSong('./Nhac/bai4/chuyendicuanam.mp3', 'Chuyến đi của năm', 3)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai4/b4.jpg" alt="" class="image_music">Đi để trở về</a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('./Nhac/bai5/NeuThoiGianTroLaiBeat-DatHanh-9697508.mp3', 'Nếu thời gian trở lại', 4)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai5/b5.jpg" alt="" class="image_music">Chuyến đi của năm</a>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat"  onclick="playSong('./Nhac/bai6/NamQuocSonHa-ERIKRTeePhuongMyChiDTAP-7115621.mp3', 'Nam quốc sơn hà', 5)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai6/b6.jpg" alt="" class="image_music">Nam quốc sơn hà</a>
+                    </div>
+                </div>
+
+                <div class="music1">
+                    <div class="music">
+                        <a  class="tenbaihat"  onclick="playSong('./Nhac/bai7/NeuMuaHaNamAyTroLai-KaronHoangAnh-7055541.mp3', 'Nếu mùa hạ năm ấy trở lại', 6)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai7/b7.jpg" alt="" class="image_music">Nếu mùa hạ trở lại</a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat"  onclick="playSong('./Nhac/bai8/TienLenVietNamOi-SonTungMTP-4003040.mp3', 'Tiên lên việt nam ơi', 7)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai8/b8.jpg" alt="" class="image_music">Tiến lên Việt Nam ơi</a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat"  onclick="playSong('./Nhac/bai9/TroVeTuoiTho-KBin-7310392.mp3', 'Trở về tuổi thơ', 8)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai9/b9.jpg" alt="" class="image_music">Trở về tuổi thơ</a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat"  onclick="playSong('./Nhac/bai10/NamNayMinhLamLai-NhatThienWinKKayceeVietNamJayKemLil7RD-6940241.mp3',  'Năm nay mình làm lại', 9)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai10/b10.jpg" alt="" class="image_music">Năm nay làm lại</a>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat"  onclick="playSong('./Nhac/bai11/ChucMungNamMoi-VuPhungTienRumDaFameLyAnhKhoaPhuongDungSocola-6204153.mp3', 'Chúc mừng năm mới', 10)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai11/b11.jpg" alt="" class="image_music">Chúc mừng năm mới</a>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat"  onclick="playSong('./Nhac/bai12/khongyeu.mp3', 'Không yêu', 11)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai12/b12.jpg" alt="" class="image_music">Không yêu</a>
+                    </div>
+                </div>
+
+                <div class="music1">
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('./Nhac/bai13/5ThangBenEm-KuunDucNam-11800169.mp3','Năm tháng bên em', 12)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai13/b13.jpg" alt="" class="image_music">Năm tháng bên em</a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('./Nhac/bai14/PhaoHoa-PhiPhuongAnhTheFaceRIN9MiinaDreamerVietNam-7565066.mp3', 'Pháo hoa', 13)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai14/b14.jpg" alt="" class="image_music">Pháo hoa</a>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat" onclick="playSong('./Nhac/bai15/Thang5KhongTroLai-TheWallNutszz-4453704.mp3', 'Tháng năm khônng trở lại' , 14)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai15/b15.jpg" alt="" class="image_music">Tháng năm trở lại</a>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat" onclick="playSong('./Nhac/bai16/GuiLaiThanhXuan-LeoSuper9JBin-7205525.mp3','Gửi lại thanh xuân' , 15)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai16/b16.jpg" alt="" class="image_music">Gửi lại thanh xuân</a>
+                    </div>
+                    <div class="music">
+                        <a  class="tenbaihat" onclick="playSong('./Nhac/bai17/BinhYenLaTroVe-TuanHiiThaoPham-6927488.mp3', 'Bình yên là trở về' , 16)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai17/b17.jpg" alt="" class="image_music">Bình yên trở về</a>
+                    </div>
+                    <div class="music">
+                        <a class="tenbaihat" onclick="playSong('./Nhac/bai18/lamviecvanchieu.mp3', 'Làm việc cần chiêu', 17)"><div class="modal"><i class='bx bx-play-circle icon' ></i></div><img src="./Nhac/bai18/b18.jpg" alt="" class="image_music">Làm việc cần chiêu</a>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="color: aliceblue;margin-left: 50px;margin-top: 50px;">Trending</h1>
+            <div class="trending">
+                <div class="trendleft">
+                    <div class="st1">
+                        <b style="color:white;margin-left: 23px;margin-top: 15px;">1</b>
+                        <img src="./Nhac/bai1/b1.jpg" class="image_music_2">
+                        <a  class="tenbaihat2" onclick="playSong('./Nhac/bai1/bb1.mp3', 'Tháng năm rực rỡ', 0)"">Tháng năm rực rỡ</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">2</b>
+                        <img src="./Nhac/bai2/b2.jpg" class="image_music_2">
+                        <a  class="tenbaihat2" onclick="playSong('./Nhac/bai2/consetrove.mp3', 'Con sẽ trở về', 1)">Con sẽ trở về</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">3</b>
+                        <img src="./Nhac/bai4/b4.jpg" class="image_music_2">
+                        <a class="tenbaihat2" onclick="playSong('./Nhac/bai4/chuyendicuanam.mp3', 'Chuyến đi của năm', 3)">Đi để trở về</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">4</b>
+                        <img src="./Nhac/bai7/b7.jpg" class="image_music_2">
+                        <a  class="tenbaihat2" onclick="playSong('./Nhac/bai7/NeuMuaHaNamAyTroLai-KaronHoangAnh-7055541.mp3', 'Nếu mùa hạ năm ấy trở lại', 6)"> Nếu mùa hạ năm ấy trở lại</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">5</b>
+                        <img src="./Nhac/bai9/b9.jpg" class="image_music_2">
+                        <a  class="tenbaihat2" onclick="playSong('./Nhac/bai9/TroVeTuoiTho-KBin-7310392.mp3', 'Trở về tuổi thơ', 8)">Trở về tuổi thơ</a>
+                    </div>
+                </div>
+                <div class="trendright">
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">6</b>
+                        <img src="./Nhac/bai10/b10.jpg" class="image_music_2">
+                        <a  class="tenbaihat2" onclick="playSong('./Nhac/bai10/NamNayMinhLamLai-NhatThienWinKKayceeVietNamJayKemLil7RD-6940241.mp3',  'Năm nay mình làm lại', 9)">Năm nay mình làm lại</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">7</b>
+                        <img src="./Nhac/bai11/b11.jpg" class="image_music_2">
+                        <a class="tenbaihat2" onclick="playSong('./Nhac/bai11/ChucMungNamMoi-VuPhungTienRumDaFameLyAnhKhoaPhuongDungSocola-6204153.mp3', 'Chúc mừng năm mới', 10)">Chúc mừng năm mới</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">8</b>
+                        <img src="./Nhac/bai12/b12.jpg" class="image_music_2">
+                        <a class="tenbaihat2" onclick="playSong('./Nhac/bai12/khongyeu.mp3', 'Không yêu', 11)">Không yêu</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 20px;margin-top: 15px;">9</b>
+                        <img src="./Nhac/bai13/b13.jpg" class="image_music_2">
+                        <a class="tenbaihat2" onclick="playSong('./Nhac/bai13/5ThangBenEm-KuunDucNam-11800169.mp3','Năm tháng bên em', 12)">Năm tháng bên em</a>
+                    </div>
+
+                    <div class="st1">
+                        <b style="color:white;margin-left: 16px;margin-top: 15px;">10</b>
+                        <img src="./Nhac/bai14/b14.jpg" class="image_music_2">
+                        <a class="tenbaihat2" onclick="playSong('./Nhac/bai14/PhaoHoa-PhiPhuongAnhTheFaceRIN9MiinaDreamerVietNam-7565066.mp3', 'Pháo hoa', 13)">Pháo hoa</a>
+                    </div>
+                </div>
+            </div>
+
+            <footer style="background-color: #181818; color: #E0E0E0; padding: 10px 20px; border-radius: 7px;margin-top: 85px;">
+                <div style="max-width: 1200px; margin: auto; display: flex; gap:55px; justify-content: space-between;">
+                    <!-- Logo and Description -->
+                    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                        <img src="logo.png" alt="Logo" style="width: 150px; display: block; margin-bottom: 20px;">
+                        <p style="font-size: 14px; line-height: 1.6;">Your Music Website là nơi bạn có thể tìm thấy các bản nhạc hot nhất, album mới nhất và thông tin về các nghệ sĩ yêu thích. Chúng tôi cam kết mang đến trải nghiệm âm nhạc tuyệt vời nhất cho bạn.</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                        <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 20px;">Liên Kết Nhanh</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="/about" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Giới Thiệu</a></li>
+                            <li><a href="/contact" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Liên Hệ</a></li>
+                            <li><a href="/privacy" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Chính Sách Bảo Mật</a></li>
+                            <li><a href="/terms" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Điều Khoản Sử Dụng</a></li>
+                            <li><a href="/faq" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Câu Hỏi Thường Gặp</a></li>
+                            <li><a href="/support" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Hỗ Trợ</a></li>
+                        </ul>
+                    </div>
+                    <!-- Latest News -->
+                    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                        <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 20px;">Tin Tức Mới Nhất</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="/news1" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Tin tức về âm nhạc</a></li>
+                            <li><a href="/news2" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Tin tức về nghệ sĩ</a></li>
+                            <li><a href="/news3" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Tin tức về album mới</a></li>
+                            <li><a href="/news4" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Tin tức về sự kiện âm nhạc</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Info -->
+                    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                        <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 20px;">Thông Tin Liên Hệ</h3>
+                        <p style="font-size: 14px; line-height: 1.6;">
+                            <i class="fas fa-envelope" style="margin-right: 10px;"></i>
+                            <a href="mailto:support@yourmusicwebsite.com" style="color: #E0E0E0; text-decoration: none; transition: color 0.3s;">support@yourmusicwebsite.com</a>
+                        </p>
+                        <p style="font-size: 14px; line-height: 1.6;">
+                            <i class="fas fa-phone-alt" style="margin-right: 10px;"></i>
+                            <a href="tel:+84123456789" style="color: #E0E0E0; text-decoration: none; transition: color 0.3s;">+84 123 456 789</a>
+                        </p>
+                        <p style="font-size: 14px; line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>
+                            123 Đường ABC, Quận 1, TP. HCM
+                        </p>
+                    </div>
+                </div>
+                <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: center; padding-top: 20px; border-top: 1px solid #444;">
+                    <!-- Social Media Links -->
+                    <div style="flex: 1; text-align: center; margin-bottom: 20px;">
+                        <a href="https://facebook.com" target="_blank" style="color: #E0E0E0; text-decoration: none; margin: 0 15px; font-size: 20px; transition: color 0.3s;">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" style="color: #E0E0E0; text-decoration: none; margin: 0 15px; font-size: 20px; transition: color 0.3s;">
+                            <i class='bx bxl-twitter' ></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" style="color: #E0E0E0; text-decoration: none; margin: 0 15px; font-size: 20px; transition: color 0.3s;">
+                            <i class='bx bxl-instagram-alt' ></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" style="color: #E0E0E0; text-decoration: none; margin: 0 15px; font-size: 20px; transition: color 0.3s;">
+                            <i class='bx bxl-youtube' ></i>
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; padding-top: 20px; border-top: 1px solid #444;">
+                    <p style="margin-top: 50; font-size: 14px;">© 2024 Your Music Website. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <div class="music-player" id="musicPlayer">
+        <div class="music-info">
+            <span id="songTitle">Chọn một bài hát</span>
+        </div>
+        <div class="controls">
+            <button id="prevButton" onclick="prevSong()">&#9664; Bài trước</button>
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mp3">
+                Trình duyệt của bạn không hỗ trợ phát nhạc.
+            </audio>
+            <button id="nextButton" onclick="nextSong()">Bài tiếp &#9654;</button>
+        </div>
+        <button id="loopButton" onclick="toggleLoop()">Lặp lại</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

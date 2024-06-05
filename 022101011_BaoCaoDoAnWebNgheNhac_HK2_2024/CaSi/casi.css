@@ -1,0 +1,95 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,81,121,1) 50%, rgba(0,212,255,1) 100%);
+
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+.MenuTrai{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 150px;
+}
+.abc{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-style: bold;
+    text-decoration: none;
+    color: aliceblue;
+}
+.abc:hover{
+    color: #1389ca;
+    scale: 1.5;
+}
+.NoiDung{
+    display: flex;
+    gap:30px;
+    border-radius: 7px;
+    margin-left: 66px;
+    margin-top: 40px;
+    width: 90%;
+    height: 800px;
+    background: rgb(31,140,196);
+    background: linear-gradient(90deg, rgba(31,140,196,0.3786764705882353) 0%, rgba(134,184,30,0.29744397759103647) 100%);
+}
+
+.MS{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.music1{
+    margin-top: 30px;
+    margin-left: 70px;
+    display: flex;
+    gap:43px;
+}
+.music{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.name-cs{
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: whitesmoke;
+    margin-top: 5px;
+    
+}
+.tenbaihat{
+    
+    /*ẩn mấy thằng con*/
+    overflow: hidden;
+    width: 210px;
+    height: 300px;
+    border-radius: 10px;
+
+}
+.image_music{
+
+    width: 210px;
+    height: 300px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    transition: 0.5s;
+ 
+}
+.tenbaihat:hover .image_music{
+    /*phóng to*/
+    scale: 1.1;
+    
+}
+.tenbaihat:hover .modal{
+    display: block;
+}
