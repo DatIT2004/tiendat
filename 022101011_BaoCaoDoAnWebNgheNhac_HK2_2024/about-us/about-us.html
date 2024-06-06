@@ -14,8 +14,7 @@
 <body>
     <header>
         <div class="logo">
-
-            <img src="logo.png" alt="" style="width: 170px;height: 100px;margin-left: 20px;margin-top: 20px;">
+            <a href="../index.html"><img src="logo.png" alt="" style="width: 170px;height: 100px;margin-left: 20px;margin-top: 20px;"></a>
         </div>
        
     </header>
@@ -91,12 +90,10 @@
             
                 <footer style="background-color: #181818; color: #E0E0E0; padding: 10px 20px; border-radius: 7px;">
                     <div style="max-width: 1200px; margin: auto; display: flex; gap:55px; justify-content: space-between;">
-                        <!-- Logo and Description -->
                         <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
                             <img src="logo.png" alt="Logo" style="width: 150px; display: block; margin-bottom: 20px;">
                             <p style="font-size: 14px; line-height: 1.6;">Your Music Website là nơi bạn có thể tìm thấy các bản nhạc hot nhất, album mới nhất và thông tin về các nghệ sĩ yêu thích. Chúng tôi cam kết mang đến trải nghiệm âm nhạc tuyệt vời nhất cho bạn.</p>
                         </div>
-                        <!-- Quick Links -->
                         <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
                             <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 20px;">Liên Kết Nhanh</h3>
                             <ul style="list-style: none; padding: 0;">
@@ -108,7 +105,6 @@
                                 <li><a href="/support" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Hỗ Trợ</a></li>
                             </ul>
                         </div>
-                        <!-- Latest News -->
                         <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
                             <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 20px;">Tin Tức Mới Nhất</h3>
                             <ul style="list-style: none; padding: 0;">
@@ -118,7 +114,6 @@
                                 <li><a href="/news4" style="color: #E0E0E0; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s;">Tin tức về sự kiện âm nhạc</a></li>
                             </ul>
                         </div>
-                        <!-- Contact Info -->
                         <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
                             <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 20px;">Thông Tin Liên Hệ</h3>
                             <p style="font-size: 14px; line-height: 1.6;">
@@ -157,26 +152,25 @@
                     </div>
                 </footer>
                 
-                <!-- Font Awesome for Social Media and Contact Icons -->
                 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
                 
         </div>
     </main>
     <script>
+        //phần tử biểu mẫu với ID feedbackForm và thêm một event listener cho sự kiện submit.
         document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            //chặn dữ liệu tải lại trang
             event.preventDefault();
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-
+            // phần tử container nơi phản hồi sẽ được hiển thị. Container này được xác định bởi class user-feedback.
             const feedbackContainer = document.querySelector('.user-feedback');
-
             const feedbackElement = document.createElement('p');
             feedbackElement.textContent = `"${message}" - ${name}`;
-
+            //phần tử <p> mới tạo (chứa phản hồi của người dùng) vào feedbackContainer.
             feedbackContainer.appendChild(feedbackElement);
-
             document.getElementById('feedbackForm').reset();
         });
     </script>

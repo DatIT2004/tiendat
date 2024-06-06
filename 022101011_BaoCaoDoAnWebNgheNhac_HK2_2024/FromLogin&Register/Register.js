@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
     registerForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu bình thường
 
-        // Get values from input fields
         const username = document.querySelector("input[type='username']").value;
         const email = document.querySelector("input[type='email']").value;
         const password = document.querySelector("input[type='password']").value;
@@ -27,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Validate password
+        // ktra password
         if (password.length < 6) {
             alert("Password must be at least 6 characters long.");
             return;
         }
 
-        // Check if passwords match
+        // Check  password
         if (password !== confirmPassword) {
             alert("Passwords do not match.");
             return;
