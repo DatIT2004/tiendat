@@ -63,7 +63,7 @@ main{
     
 }
 .showcase {
-    background: url(/about-us/baner.png) no-repeat;
+    background: url(./baner.png) no-repeat;
     background-size: cover;
     background-position: center;
     height: 60vh;
